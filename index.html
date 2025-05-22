@@ -32,7 +32,40 @@
       <div class="desc">Share Your Opinions</div>
     </div>
   </main>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Background Changer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Welcome</h1>
+  <p>This background will change color.</p>
 
+  <ul class="navbar">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Gallery</a></li>
+  </ul>
+
+  <!-- Add your galleries and other content here -->
+
+  <footer>
+    &copy; 2025 Your Site
+  </footer>
+
+  <!-- Add the JavaScript here -->
+  <script>
+    const colors = ['#f4a261', '#2a9d8f', '#e76f51', '#264653', '#e9c46a'];
+    let current = 0;
+
+    function changeBackground() {
+      document.body.style.backgroundColor = colors[current];
+      current = (current + 1) % colors.length;
+    }
+
+    setInterval(changeBackground, 3000);
+  </script>
   <footer>
     <p>Contact us at 804-547-4663</p>
   </footer>
