@@ -1,3 +1,30 @@
+<html>
+<head>
+<style>
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+}
+ {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}
+</style>
+</head>
+<body>
+
+
+<div></div>
+</body>
+</html>
+
+
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -19,7 +46,6 @@ p {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: grey;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -37,7 +63,6 @@ p {
 }
 
 .navbar li a:hover {
-  background-color: #112;
 }
 
 /* Gallery styling */
