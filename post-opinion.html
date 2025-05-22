@@ -34,7 +34,43 @@
 	 <label for="fname"> What is your reason for entering this form:</label><br>
   <input type="text" id="fname" name="fname" value=""><br>
   <input type="submit" value="Submit">
-	
+	/* Background animation for the whole page */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  animation: bgChange 12s infinite;
+}
+
+/* Keyframes for background color animation */
+@keyframes bgChange {
+  0%   { background-color: red; }
+  25%  { background-color: yellow; }
+  50%  { background-color: blue; }
+  75%  { background-color: green; }
+  100% { background-color: red; }
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #4CAF50;
+}
+
+/* Paragraphs */
+p {
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Navigation bar */
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:
 </form> 
 	
 
