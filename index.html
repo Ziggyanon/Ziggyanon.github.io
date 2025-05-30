@@ -5,9 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ziyon's School Subs</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      transition: background-color 1s ease;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #222;
+      padding: 10px 0;
+    }
+
+    .navbar {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar li {
+      margin: 0 20px;
+    }
+
+    .navbar a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      color: #ff00ff;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      animation: popUp 2s ease;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 40px;
+    }
+
+    .gallery {
+      text-align: center;
+    }
+
+    .gallery img {
+      width: 250px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .desc {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    @keyframes popUp {
+      from {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    footer {
+      background-color: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
 
+  <!-- Navigation Bar -->
   <nav>
     <ul class="navbar">
       <li><a href="index.html">Home</a></li>
@@ -16,14 +115,16 @@
     </ul>
   </nav>
 
+  <!-- Header -->
   <header>
     <h1>Welcome to School Subs</h1>
     <p>Your place to share and explore school experiences.</p>
   </header>
 
+  <!-- Main Content / Gallery -->
   <main>
     <div class="gallery">
-      <img src="codervabuilding-scaled.jpg" alt="School Image" width="20%">
+      <img src="codervabuilding-scaled.jpg" alt="School Image">
       <div class="desc">Our School Front</div>
     </div>
 
@@ -32,29 +133,13 @@
       <div class="desc">Share Your Opinions</div>
     </div>
   </main>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Background Changer</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>Welcome</h1>
-  <p>This background will change color.</p>
 
-  <ul class="navbar">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Gallery</a></li>
-  </ul>
-
-  <!-- Add your galleries and other content here -->
-
+  <!-- Footer -->
   <footer>
-    &copy; 2025 Your Site
+    <p>&copy; 2025 School Subs | Contact us at 804-547-4663</p>
   </footer>
 
-  <!-- Add the JavaScript here -->
+  <!-- JavaScript for background color change -->
   <script>
     const colors = ['#f4a261', '#2a9d8f', '#e76f51', '#264653', '#e9c46a'];
     let current = 0;
@@ -66,10 +151,6 @@
 
     setInterval(changeBackground, 3000);
   </script>
-  <footer>
-    <p>Contact us at 804-547-4663</p>
-  </footer>
 
 </body>
 </html>
-
