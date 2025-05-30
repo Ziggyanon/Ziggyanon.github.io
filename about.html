@@ -5,109 +5,53 @@
   <title>About - School Subs</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Background Gradient */
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #f0f8ff, #d4eaff);
-      color: #333;
-      animation: fadeIn 1.2s ease-in-out;
+      font-family: Arial, sans-serif;
+      transition: background-color 1s ease;
     }
 
-    /* Navbar Styles */
+    /* Navigation Bar */
     .navbar {
-      list-style: none;
-      background: #004080;
+      list-style-type: none;
+      margin: 0;
+      padding: 15px 0;
+      background-color: #222;
       display: flex;
       justify-content: center;
-      padding: 10px 0;
-      margin: 0;
     }
 
     .navbar li {
-      margin: 0 15px;
+      margin: 0 20px;
     }
 
     .navbar a {
-      color: white;
+      color: #00ffff;
       text-decoration: none;
       font-weight: bold;
-      transition: transform 0.3s ease, color 0.3s ease;
     }
 
     .navbar a:hover {
-      transform: scale(1.1);
-      color: #ffdd57;
+      color: #ff00ff;
     }
 
-    /* Spinning Title */
-    h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-top: 30px;
-      animation: spin 6s linear infinite;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    /* Content Container */
-    div {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
+    /* White Box Container */
+    .content-box {
+      background-color: white;
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 30px;
       border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      animation: slideIn 1.2s ease-out;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      color: #000;
     }
 
-    @keyframes slideIn {
-      from {
-        transform: translateY(40px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    /* Footer */
     footer {
       text-align: center;
-      padding: 15px;
-      background: #004080;
-      color: white;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
-
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-
-      .navbar {
-        flex-direction: column;
-      }
+      padding: 20px;
+      background-color: #111;
+      color: #ccc;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -120,8 +64,8 @@
     <li><a href="post-opinion.html">Post Opinion</a></li>
   </ul>
 
-  <!-- Main Content -->
-  <div>
+  <!-- White Content Box -->
+  <div class="content-box">
     <h1>Ziyon's Contact Info</h1>
     <p>Ziyon is the creator of this website. If you would like to contact him:</p>
     <p>Email: <a href="mailto:Ziyon.bacote@gmail.com">Ziyon.bacote@gmail.com</a></p>
@@ -135,6 +79,19 @@
   <footer>
     &copy; 2025 School Subs. All rights reserved.
   </footer>
+
+  <!-- Background Color Changer Script -->
+  <script>
+    const colors = ['#f4a261', '#2a9d8f', '#e76f51', '#264653', '#e9c46a'];
+    let current = 0;
+
+    function changeBackground() {
+      document.body.style.backgroundColor = colors[current];
+      current = (current + 1) % colors.length;
+    }
+
+    setInterval(changeBackground, 3000);
+  </script>
 
 </body>
 </html>
